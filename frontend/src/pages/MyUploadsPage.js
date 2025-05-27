@@ -11,7 +11,7 @@ const MyUploadsPage = () => {
     const fetchUploads = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/research/my-uploads', {
+        const res = await axios.get('https://research-search-backend.onrender.com/api/research/my-uploads', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMyResearches(res.data);
