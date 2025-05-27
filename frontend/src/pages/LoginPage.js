@@ -12,7 +12,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://research-search-backend.onrender.com/api/auth/login', {email,password});
       const { token, username } = res.data;
       localStorage.setItem('username', username);
       localStorage.setItem('token', token);
