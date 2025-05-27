@@ -66,7 +66,7 @@ const UploadPage = () => {
     formData.append('uploadedBy', userName);
 
     try {
-      await axios.post('http://localhost:5000/api/research/upload', formData, {
+      await axios.post('https://research-search-backend.onrender.com/api/research/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
