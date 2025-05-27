@@ -14,7 +14,7 @@ const ResearchDetailPage = () => {
     const fetchResearch = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`http://localhost:5000/api/research/${id}`, {
+        const res = await axios.get(`https://research-search-backend.onrender.com/api/research/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -74,8 +74,7 @@ const ResearchDetailPage = () => {
 
         {research.pdfFile && (
           <p>
-            <a
-              href={`http://localhost:5000/api/download/${research.pdfFile}`}
+            <a href={`https://research-search-backend.onrender.com/api/download/${research.pdfFile}`}
               download={`${research.title}.pdf`}
               rel="noopener noreferrer"
             >
