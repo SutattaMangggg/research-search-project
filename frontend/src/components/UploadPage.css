@@ -1,0 +1,88 @@
+/* Upload Form Container */
+.upload-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #e8f5e9; /* เขียวอ่อน */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Style */
+.upload-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Form Label */
+.upload-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #34495e; /* สีเทาเข้ม */
+}
+
+/* Input, Textarea and File Input */
+.upload-form input[type="text"],
+.upload-form textarea,
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+/* Developer and Advisor Rows */
+.developer-row,
+.advisor-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Add and Remove Buttons */
+.add-btn,
+.remove-btn {
+  background-color: #f1f8e9; /* เขียวอ่อน */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.add-btn:hover {
+  background-color: #e8f5e9; /* สีเขียวอ่อนเมื่อ hover */
+}
+
+.remove-btn {
+  background-color: #f8d7da; /* สีแดงอ่อน */
+}
+
+.remove-btn:hover {
+  background-color: #f5c6cb; /* สีแดงอ่อนเข้มขึ้นเมื่อ hover */
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #43a047; /* เขียวเข้ม */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #2e7d32; /* เขียวเข้ม */
+}

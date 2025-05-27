@@ -1,0 +1,222 @@
+/* ===== พื้นหลังและฟอนต์หลักของเว็บ ===== */
+body {
+  background-color: #dff4e1;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2f3e46;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #2e7d32;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-left h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-right span {
+  color: white;
+  font-weight: 500;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.navbar-button,
+.navbar-link,
+.navbar-right button {
+  background-color: #43a047;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.navbar-button:hover,
+.navbar-link:hover,
+.navbar-right button:hover {
+  background-color: #2e7d32;
+}
+
+/* ===== Layout หลักแบ่งซ้าย/ขวา ===== */
+.content-layout {
+  display: flex;
+  padding: 24px 32px;
+  max-width: 950px;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+  position: fixed;
+  top: 64px; /* ปรับให้ตรงกับความสูงของ Navbar */
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 64px);
+  background-color: #e1f5e9;
+  /* border-right: 2px solid #b2dfdb; */
+  padding: 20px 15px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #2e7d32;
+  text-align: center;
+}
+
+/* Year Links */
+.year-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.year-link::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+}
+
+.year-link:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+/* ===== รายการงานวิจัย ===== */
+.research-list-container {
+  flex: 1;
+  
+}
+
+.research-list-container h2 {
+  font-size: 26px;
+  color: #0b0d2c;
+  margin-bottom: 20px;
+}
+
+.year-section h3 {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #2e7d32;
+}
+
+.research-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-list li {
+  background-color: #f1f8e9;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.research-list li:hover {
+  transform: translateY(-3px);
+}
+
+.research-list strong {
+  font-size: 20px;
+  color: #1b2c45;
+}
+
+.research-list small {
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  color: #4a5568;
+}
+
+/* ===== ปุ่มดูรายละเอียด ===== */
+.button-link {
+  margin-top: 4px;
+  padding: 6px 14px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #2e7d32;
+}
+
+/* ===== ช่องค้นหา ===== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #43a047;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #43a047;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #2e7d32;
+}
