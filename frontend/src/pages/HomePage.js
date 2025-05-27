@@ -25,7 +25,7 @@ const HomePage = () => {
 
   const fetchAllResearch = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/research');
+      const res = await axios.get('https://research-search-backend.onrender.com/api/research');
       setAllResearch(res.data);
       setFilteredResearch(res.data);
     } catch (err) {
@@ -53,7 +53,7 @@ const HomePage = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/research/search', { query });
+      const res = await axios.post('https://research-search-backend.onrender.com/api/research/search', { query });
       const results = selectedYear
         ? res.data.filter((item) => item.year === selectedYear)
         : res.data;
