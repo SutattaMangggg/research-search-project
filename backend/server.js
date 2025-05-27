@@ -30,6 +30,11 @@ app.get('/api/download/:filename', (req, res) => {
   res.download(filePath);
 });
 
+// ✅ เพิ่มตรงนี้ เพื่อไม่ให้แสดง "Cannot GET /"
+app.get('/', (req, res) => {
+  res.send('Research Search Backend is running!');
+});
+
 // Connect MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
